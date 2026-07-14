@@ -1,6 +1,3 @@
-from sys import version
-from turtle import title
-
 from fastapi import FastAPI
 
 app = FastAPI(title="Financeiro API", version="0.1.0")
@@ -11,7 +8,9 @@ async def root() -> dict[str, str]:
     return {"message": "Financeiro API"}
 
 
-@app.get("/health", tags["health"])
+@app.get(
+    "/health", tags=["health"]
+)  # nome[x] sem = antes = acesso a algo que já existe. nome=[x] = criação/atribuição de um valor a um parâmetro ou variável.
 async def health_check() -> dict[str, str]:
     return {"status": "ok"}
 
