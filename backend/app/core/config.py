@@ -14,5 +14,7 @@ class Settings(BaseSettings):
     # puxa do .env essas variaveis
     model_config = SettingsConfigDict(env_file=".env")
 
-    # instancia as configs
-    config = Settings()
+
+# instancia as configs
+
+config = Settings()
