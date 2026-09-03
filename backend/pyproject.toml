@@ -26,4 +26,4 @@ dev = [
 ]
 
 [tool.fastapi]
-entrypoint = "backend.main:app"
+entrypoint = "app.main:app"
