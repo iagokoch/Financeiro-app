@@ -122,7 +122,7 @@ dev = [
 requires-dist = [
     { name = "alembic", specifier = ">=1.18.4" },
     { name = "argon2-cffi", specifier = ">=25.1.0" },
-    { name = "fastapi", extras = ["standar", "standard"], specifier = ">=0.136.3" },
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.136.3" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.3.4" },
     { name = "pydantic-settings", specifier = ">=2.14.1" },
     { name = "pyjwt", specifier = ">=2.13.0" },
