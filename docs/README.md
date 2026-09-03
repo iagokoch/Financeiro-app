@@ -81,6 +81,15 @@ NEXT_PUBLIC_API_URL=
 
 > Do not commit real credentials, tokens, or sensitive data.
 
+## Security
+
+Baseline practices for the MVP:
+
+* **Never commit the real `.env`.** Only `.env.example` belongs in the repository, and it must contain placeholders — never real values.
+* **Secrets come from environment variables**, never hardcoded in the source. No credential, key, or token should appear in a `.py` file, in tests, or in logs.
+* **`DATABASE_URL` and the JWT key are secrets** and must be treated as such: rotated if leaked, never shared over chat/issues/commits, and different per environment (local, staging, production).
+* **Dependencies stay locked.** `uv.lock` is committed and installs are made from it (`uv sync --frozen`) — no loose installs in production.
+
 ## Useful Scripts
 
 ```bash
